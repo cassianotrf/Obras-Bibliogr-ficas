@@ -1,0 +1,1401 @@
+  [1m[35m (199.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (876.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (722.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthors (20191021123057)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191021123057"]]
+  [1m[35m (651.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-21 12:31:34.868697"], ["updated_at", "2019-10-21 12:31:34.868697"]]
+  [1m[35m (649.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthors (20191021123057)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20191021123057"]]
+  [1m[35m (159.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthors (20191021123057)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "names_total" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191021123057"]]
+  [1m[35m (158.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/authors" for ::1 at 2019-10-21 10:01:42 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthorsController#index as */*
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 1638)
+
+
+Started GET "/api/v1/authors.json" for ::1 at 2019-10-21 10:01:59 -0300
+Processing by Api::V1::AuthorsController#index as JSON
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 756)
+
+
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:05:50 -0300
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"name"=>"Cassiano COsta"}}
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.0ms | Allocations: 69868)
+
+
+  
+NameError (undefined local variable or method `author_params' for #<Api::V1::AuthorsController:0x0000564130b0d9a8>):
+  
+app/controllers/api/v1/authors_controller.rb:18:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:07:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"name"=>"Cassiano COsta"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:19:in `create'
+  [1m[36mAuthor Create (26.9ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cassiano COsta"], ["created_at", "2019-10-21 13:07:56.126548"], ["updated_at", "2019-10-21 13:07:56.126548"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:19:in `create'
+  [1m[35m (180.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:19:in `create'
+Completed 201 Created in 314ms (Views: 0.3ms | ActiveRecord: 208.1ms | Allocations: 7446)
+
+
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:09:23 -0300
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"name"=>"['Cassiano COsta', 'Wilson de Souza']", "names_total"=>"2"}}
+[31mUnpermitted parameter: :names_total[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:19:in `create'
+  [1m[36mAuthor Create (0.2ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "['Cassiano COsta', 'Wilson de Souza']"], ["created_at", "2019-10-21 13:09:23.350086"], ["updated_at", "2019-10-21 13:09:23.350086"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:19:in `create'
+  [1m[35m (284.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:19:in `create'
+Completed 201 Created in 293ms (Views: 1.0ms | ActiveRecord: 285.1ms | Allocations: 3357)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthors (20191021123057)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[36mprimary::SchemaMigration Destroy (12.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20191021123057"]]
+  [1m[35m (141.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthors (20191021123057)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "names" varchar, "names_total" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191021123057"]]
+  [1m[35m (150.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:21:37 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"name"=>"['Cassiano COsta', 'Wilson de Souza']", "names_total"=>"2"}}
+[31mUnpermitted parameter: :names_total[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 4342)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for Author.):
+  
+app/controllers/api/v1/authors_controller.rb:18:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:23:44 -0300
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']", "names_total"=>"2"}}
+[31mUnpermitted parameters: :names, :names_total[0m
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms | Allocations: 70143)
+
+
+  
+NameError (undefined local variable or method `formatar_nomes' for #<Api::V1::AuthorsController:0x0000558ca9f83ca8>):
+  
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:25:45 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']", "names_total"=>"2"}}
+[31mUnpermitted parameters: :names, :names_total[0m
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms | Allocations: 36281)
+
+
+  
+NoMethodError (undefined method `formatar_nomes' for #<Api::V1::AuthorsController:0x0000558caa06e460>):
+  
+app/controllers/api/v1/authors_controller.rb:18:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:29:04 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']", "names_total"=>"2"}}
+[31mUnpermitted parameters: :names, :names_total[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 3217)
+
+
+  
+NoMethodError (undefined method `formatar_nomes' for #<Class:0x00007fd49412c008>):
+  
+app/controllers/api/v1/authors_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:36:17 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']", "names_total"=>"2"}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 3735)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/models/author.rb:4:in `formatar_nomes'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:36:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']", "names_total"=>"2"}}
+[31mUnpermitted parameters: :names, :names_total[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 4195)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/models/author.rb:9:in `formatar_nomes'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:37:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']", "names_total"=>"2"}}
+[31mUnpermitted parameters: :names, :names_total[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms | Allocations: 4634)
+
+
+  
+NoMethodError (undefined method `save' for []:Array):
+  
+app/controllers/api/v1/authors_controller.rb:21:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:38:22 -0300
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1003)
+
+
+  
+NoMethodError (undefined method `save' for []:Array):
+  
+app/controllers/api/v1/authors_controller.rb:21:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:38:58 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 5286)
+
+
+  
+NoMethodError (undefined method `name=' for #<Author:0x00007fd488673a68>
+Did you mean?  names=
+               names
+               names?):
+  
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:39:14 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms | Allocations: 7210)
+
+
+  
+NoMethodError (undefined method `name' for #<Author:0x0000558caa088658>
+Did you mean?  names):
+  
+app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:42:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.5ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[]"], ["created_at", "2019-10-21 13:42:57.315663"], ["updated_at", "2019-10-21 13:42:57.315663"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (201.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 202.9ms | Allocations: 7340)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"api/v1/authors", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAuthor Create (0.8ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"CASSIANO\"]"], ["created_at", "2019-10-21 13:43:43.797291"], ["updated_at", "2019-10-21 13:43:43.797291"]]
+  [1m[35m (153.4ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:46:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[]"], ["created_at", "2019-10-21 13:46:16.146707"], ["updated_at", "2019-10-21 13:46:16.146707"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (202.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 212ms (Views: 0.4ms | ActiveRecord: 203.1ms | Allocations: 7165)
+
+
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:55:27 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 5014)
+
+
+  
+NoMethodError (undefined method `formatar_nomes' for #<Author:0x00007fd48869a5f0>
+Did you mean?  format_names):
+  
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:55:39 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.2ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[]"], ["created_at", "2019-10-21 13:55:39.062493"], ["updated_at", "2019-10-21 13:55:39.062493"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (151.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 160ms (Views: 0.3ms | ActiveRecord: 152.6ms | Allocations: 7058)
+
+
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 10:56:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 4194)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/models/author.rb:9:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAuthor Create (59.0ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"CASSIANO\"]"], ["created_at", "2019-10-21 14:02:43.351121"], ["updated_at", "2019-10-21 14:02:43.351121"]]
+  [1m[35m (117.6ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:05:55 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.5ms | Allocations: 4483)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/models/author.rb:9:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:08:49 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (67.2ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[]"], ["created_at", "2019-10-21 14:08:49.628594"], ["updated_at", "2019-10-21 14:08:49.628594"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (190.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+[31mUnpermitted parameter: :names[0m
+Completed 201 Created in 268ms (Views: 0.3ms | ActiveRecord: 258.1ms | Allocations: 7452)
+
+
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:10:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+[31mUnpermitted parameter: :names[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[]"], ["created_at", "2019-10-21 14:10:02.645768"], ["updated_at", "2019-10-21 14:10:02.645768"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[35m (146.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+[31mUnpermitted parameter: :names[0m
+Completed 201 Created in 158ms (Views: 0.3ms | ActiveRecord: 147.2ms | Allocations: 7217)
+
+
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:10:21 -0300
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+[31mUnpermitted parameter: :names[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[36mAuthor Create (0.2ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[]"], ["created_at", "2019-10-21 14:10:21.557096"], ["updated_at", "2019-10-21 14:10:21.557096"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[35m (202.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+[31mUnpermitted parameter: :names[0m
+Completed 201 Created in 209ms (Views: 0.9ms | ActiveRecord: 202.4ms | Allocations: 3404)
+
+
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:11:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"CASSIANO\"]"], ["created_at", "2019-10-21 14:11:38.358942"], ["updated_at", "2019-10-21 14:11:38.358942"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[35m (196.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+[31mUnpermitted parameter: :names[0m
+Completed 201 Created in 207ms (Views: 0.3ms | ActiveRecord: 197.8ms | Allocations: 7111)
+
+
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:12:14 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.9ms | Allocations: 73799)
+
+
+  
+NameError (undefined local variable or method `names' for #<Api::V1::AuthorsController:0x00007f67a01acae8>):
+  
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:12:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 2.4ms | Allocations: 73813)
+
+
+  
+NameError (undefined local variable or method `author' for #<Api::V1::AuthorsController:0x000055ec2ee81bb8>
+Did you mean?  @authors):
+  
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:12:40 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 0.7ms | Allocations: 73686)
+
+
+  
+NameError (undefined local variable or method `names' for #<Api::V1::AuthorsController:0x00007f67a8c3ebe8>):
+  
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors.json" for ::1 at 2019-10-21 11:13:04 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as JSON
+  Parameters: {"author"=>{"names"=>"['Cassiano COsta', 'Wilson de Souza']"}}
+[31mUnpermitted parameter: :names[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "{}"], ["created_at", "2019-10-21 14:13:05.035527"], ["updated_at", "2019-10-21 14:13:05.035527"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[35m (183.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+[31mUnpermitted parameter: :names[0m
+Completed 201 Created in 198ms (Views: 0.5ms | ActiveRecord: 185.0ms | Allocations: 7187)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:15:33 -0300
+Processing by Api::V1::AuthorsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: author):
+  
+app/controllers/api/v1/authors_controller.rb:53:in `author_params'
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:16:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.7ms | Allocations: 3752)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: author):
+  
+app/controllers/api/v1/authors_controller.rb:53:in `author_params'
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:16:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.5ms | Allocations: 3787)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: author):
+  
+app/controllers/api/v1/authors_controller.rb:53:in `author_params'
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:17:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.6ms | Allocations: 73662)
+
+
+  
+NameError (undefined local variable or method `names' for #<Api::V1::AuthorsController:0x00007f67a8b61f18>):
+  
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:18:20 -0300
+Processing by Api::V1::AuthorsController#create as */*
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.0ms | Allocations: 69950)
+
+
+  
+NameError (undefined local variable or method `names' for #<Api::V1::AuthorsController:0x000055ec30906ee8>):
+  
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:19:04 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+Completed 500 Internal Server Error in 64391ms (ActiveRecord: 0.6ms | Allocations: 113929)
+
+
+  
+SystemExit (exit):
+  
+(pry):3:in `abort'
+(pry):3:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:20:19 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+Completed 500 Internal Server Error in 101255ms (ActiveRecord: 0.5ms | Allocations: 12556)
+
+
+  
+SystemExit (exit):
+  
+(pry):5:in `abort'
+(pry):5:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:22:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+Completed 500 Internal Server Error in 12354ms (ActiveRecord: 0.9ms | Allocations: 11236)
+
+
+  
+SystemExit (exit):
+  
+(pry):7:in `abort'
+(pry):7:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:22:32 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+Completed 500 Internal Server Error in 48029ms (ActiveRecord: 0.5ms | Allocations: 11463)
+
+
+  
+SystemExit (exit):
+  
+(pry):9:in `abort'
+(pry):9:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:24:07 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+'names:['Cassiano']
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+'names:['Cassiano']
+}'):
+  
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+'names:['Cassiano']
+}
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:24:28 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+'names:'['Cassiano']''
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+'names:'['Cassiano']''
+}'):
+  
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+'names:'['Cassiano']''
+}
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:24:36 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+'names:'['Cassiano']'
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+'names:'['Cassiano']'
+}'):
+  
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+'names:'['Cassiano']'
+}
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:24:48 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+'names:'Cassiano'
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+'names:'Cassiano'
+}'):
+  
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+'names:'Cassiano'
+}
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:24:59 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+names:'Cassiano'
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+names:'Cassiano'
+}'):
+  
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.0) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+names:'Cassiano'
+}
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:25:37 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>"Cassiano", "author"=>{"names"=>"Cassiano"}}
+[31mUnpermitted parameter: :author[0m
+[31mUnpermitted parameter: :author[0m
+Completed 500 Internal Server Error in 37454ms (ActiveRecord: 0.0ms | Allocations: 10143)
+
+
+  
+SystemExit (exit):
+  
+(pry):12:in `abort'
+(pry):12:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:26:28 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>"Cassiano", "author"=>{"names"=>"Cassiano"}}
+[31mUnpermitted parameter: :author[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 4018)
+
+
+  
+NoMethodError (undefined method `each' for "Cassiano":String):
+  
+app/models/author.rb:9:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:26:39 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+[31mUnpermitted parameters: :names, :author[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 587)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/models/author.rb:9:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:27:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+[31mUnpermitted parameters: :names, :author[0m
+Completed 500 Internal Server Error in 47609ms (ActiveRecord: 0.5ms | Allocations: 10585)
+
+
+  
+SystemExit (exit):
+  
+(pry):14:in `abort'
+(pry):14:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:28:01 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>"Cassiano", "author"=>{"names"=>"Cassiano"}}
+[31mUnpermitted parameter: :author[0m
+Completed 500 Internal Server Error in 195093ms (ActiveRecord: 0.0ms | Allocations: 9036)
+
+
+  
+SystemExit (exit):
+  
+(pry):16:in `abort'
+(pry):16:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:31:34 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/cassiano/development/Obras-Bibliogr-ficas/Obras-Bibliogr-ficas/app/controllers/api/v1/authors_controller.rb:53: syntax error, unexpected '}', expecting =>
+        params.permit({:names})
+                             ^):
+  
+app/controllers/api/v1/authors_controller.rb:53: syntax error, unexpected '}', expecting =>
+app/controllers/api/v1/authors_controller.rb:53: syntax error, unexpected '}', expecting =>
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:32:50 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>"Cassiano", "author"=>{"names"=>"Cassiano"}}
+[31mUnpermitted parameter: :author[0m
+Completed 500 Internal Server Error in 25747ms (ActiveRecord: 0.8ms | Allocations: 107938)
+
+
+  
+SystemExit (exit):
+  
+(pry):2:in `abort'
+(pry):2:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:33:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+[31mUnpermitted parameters: :names, :author[0m
+Completed 500 Internal Server Error in 126406ms (ActiveRecord: 0.6ms | Allocations: 12858)
+
+
+  
+SystemExit (exit):
+  
+(pry):4:in `abort'
+(pry):4:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:35:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+Completed 500 Internal Server Error in 34310ms (ActiveRecord: 0.6ms | Allocations: 11049)
+
+
+  
+SystemExit (exit):
+  
+(pry):6:in `abort'
+(pry):6:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:36:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 19297ms (ActiveRecord: 0.7ms | Allocations: 11149)
+
+
+  
+SystemExit (exit):
+  
+(pry):8:in `abort'
+(pry):8:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:36:43 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 12950ms (ActiveRecord: 0.7ms | Allocations: 10616)
+
+
+  
+SystemExit (exit):
+  
+(pry):10:in `abort'
+(pry):10:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:36:58 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>"Cassiano", "author"=>{"names"=>"Cassiano"}}
+Completed 500 Internal Server Error in 111057ms (ActiveRecord: 0.0ms | Allocations: 10152)
+
+
+  
+SystemExit (exit):
+  
+(pry):12:in `abort'
+(pry):12:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:38:52 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>"Cassiano", "author"=>{"names"=>"Cassiano"}}
+[31mUnpermitted parameter: :names[0m
+Completed 500 Internal Server Error in 19330ms (ActiveRecord: 0.8ms | Allocations: 10540)
+
+
+  
+SystemExit (exit):
+  
+(pry):14:in `abort'
+(pry):14:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:39:13 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+Completed 500 Internal Server Error in 18591ms (ActiveRecord: 0.0ms | Allocations: 7594)
+
+
+  
+SystemExit (exit):
+  
+(pry):16:in `abort'
+(pry):16:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:39:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"CASSIANO\"]"], ["created_at", "2019-10-21 14:39:57.860154"], ["updated_at", "2019-10-21 14:39:57.860154"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (186.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 197ms (Views: 0.3ms | ActiveRecord: 187.4ms | Allocations: 6552)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:46:43 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+Completed 500 Internal Server Error in 36819ms (ActiveRecord: 0.0ms | Allocations: 16625)
+
+
+  
+SystemExit (exit):
+  
+(pry):20:in `abort'
+(pry):20:in `block in format_names'
+app/models/author.rb:14:in `block in format_names'
+app/models/author.rb:9:in `each'
+app/models/author.rb:9:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:47:37 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+Completed 500 Internal Server Error in 278487ms (ActiveRecord: 0.6ms | Allocations: 58318)
+
+
+  
+SystemExit (exit):
+  
+(pry):33:in `abort'
+(pry):33:in `create'
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:52:47 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms | Allocations: 4212)
+
+
+  
+NoMethodError (undefined method `push' for "[]":String):
+  
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:53:09 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano"], "author"=>{"names"=>["Cassiano"]}}
+Completed 500 Internal Server Error in 74596ms (ActiveRecord: 1.0ms | Allocations: 115043)
+
+
+  
+SystemExit (exit):
+  
+(pry):5:in `abort'
+(pry):5:in `create'
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:54:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano", "Wilson"], "author"=>{"names"=>["Cassiano", "Wilson"]}}
+Completed 500 Internal Server Error in 154034ms (ActiveRecord: 0.9ms | Allocations: 15227)
+
+
+  
+SystemExit (exit):
+  
+(pry):9:in `abort'
+(pry):9:in `create'
+app/controllers/api/v1/authors_controller.rb:20:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:57:13 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano", "Wilson"], "author"=>{"names"=>["Cassiano", "Wilson"]}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms | Allocations: 5652)
+
+
+  
+NoMethodError (undefined method `name' for #<Author:0x00007f45905ef600>
+Did you mean?  names):
+  
+app/controllers/api/v1/authors_controller.rb:21:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:57:25 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano", "Wilson"], "author"=>{"names"=>["Cassiano", "Wilson"]}}
+Completed 500 Internal Server Error in 67076ms (ActiveRecord: 0.6ms | Allocations: 18231)
+
+
+  
+SystemExit (exit):
+  
+(pry):13:in `abort'
+(pry):13:in `create'
+app/controllers/api/v1/authors_controller.rb:23:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 11:59:07 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano", "Wilson"], "author"=>{"names"=>["Cassiano", "Wilson"]}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"CASSIANO\", \"WILSON\"]"], ["created_at", "2019-10-21 14:59:07.645333"], ["updated_at", "2019-10-21 14:59:07.645333"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[35m (187.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+Completed 201 Created in 199ms (Views: 0.2ms | ActiveRecord: 189.0ms | Allocations: 6449)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:23:41 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano Mangini da Costa", "Wilson SOuza", "Roberto AlmeIda FilHo"], "author"=>{"names"=>["Cassiano Mangini da Costa", "Wilson SOuza", "Roberto AlmeIda FilHo"]}}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 5059)
+
+
+  
+NameError (undefined local variable or method `nome_dividido' for #<Author:0x00007f459043e2e8>):
+  
+app/models/author.rb:27:in `block in format_names'
+app/models/author.rb:8:in `each'
+app/models/author.rb:8:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:24:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano Mangini da Costa", "Wilson SOuza", "Roberto AlmeIda FilHo"], "author"=>{"names"=>["Cassiano Mangini da Costa", "Wilson SOuza", "Roberto AlmeIda FilHo"]}}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms | Allocations: 5210)
+
+
+  
+NameError (undefined local variable or method `partes_nome' for #<Author:0x00005649c26bfb90>):
+  
+app/models/author.rb:27:in `block in format_names'
+app/models/author.rb:8:in `each'
+app/models/author.rb:8:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:24:34 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["Cassiano Mangini da Costa", "Wilson SOuza", "Roberto AlmeIda FilHo"], "author"=>{"names"=>["Cassiano Mangini da Costa", "Wilson SOuza", "Roberto AlmeIda FilHo"]}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.9ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"COSTA, Cassiano Mangini Da\", \"SOUZA, Wilson\", \"ALMEIDA FILHO, Roberto\"]"], ["created_at", "2019-10-21 15:24:34.264638"], ["updated_at", "2019-10-21 15:24:34.264638"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (141.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 151ms (Views: 0.1ms | ActiveRecord: 143.4ms | Allocations: 5423)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:25:15 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERrto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERrto AlmeIda FilHo"]}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"COSTA, Cassiano Mangini Da\", \"SOUZA, Wilson\", \"ALMEIDA FILHO, Roberrto\"]"], ["created_at", "2019-10-21 15:25:15.374602"], ["updated_at", "2019-10-21 15:25:15.374602"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (178.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 187ms (Views: 0.4ms | ActiveRecord: 178.3ms | Allocations: 3249)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:25:34 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"]}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.2ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"COSTA, Cassiano Mangini Da\", \"SOUZA, Wilson\", \"ALMEIDA FILHO, Roberto\"]"], ["created_at", "2019-10-21 15:25:34.613628"], ["updated_at", "2019-10-21 15:25:34.613628"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (197.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 207ms (Views: 0.3ms | ActiveRecord: 197.3ms | Allocations: 3253)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:28:26 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"name_total"=>5, "names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"]}}
+Completed 422 Unprocessable Entity in 256ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 6616)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:28:42 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>5, "names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>5}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 660)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:29:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>5, "names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>5}}
+Completed 500 Internal Server Error in 42665ms (ActiveRecord: 0.5ms | Allocations: 12611)
+
+
+  
+SystemExit (exit):
+  
+(pry):16:in `abort'
+(pry):16:in `create'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:29:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>3, "names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>3}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[36mAuthor Create (0.9ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"COSTA, Cassiano Mangini Da\", \"SOUZA, Wilson\", \"ALMEIDA FILHO, Roberto\"]"], ["created_at", "2019-10-21 15:29:53.964889"], ["updated_at", "2019-10-21 15:29:53.964889"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+  [1m[35m (101.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:22:in `create'
+Completed 201 Created in 5820ms (Views: 0.3ms | ActiveRecord: 103.5ms | Allocations: 13096)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:33:32 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>3, "names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>3}}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms | Allocations: 3951)
+
+
+  
+NoMethodError (undefined method `upcase' for ["CAssiano", "Mangini", "da", "Costa"]:Array
+Did you mean?  case):
+  
+app/models/author.rb:40:in `verify_word'
+app/models/author.rb:26:in `block (2 levels) in format_names'
+app/models/author.rb:25:in `block in format_names'
+app/models/author.rb:9:in `each'
+app/models/author.rb:9:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:34:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>3, "names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>3}}
+Completed 500 Internal Server Error in 25103ms (ActiveRecord: 0.9ms | Allocations: 14276)
+
+
+  
+SystemExit (exit):
+  
+(pry):18:in `abort'
+(pry):18:in `block (2 levels) in format_names'
+app/models/author.rb:26:in `block (2 levels) in format_names'
+app/models/author.rb:25:in `block in format_names'
+app/models/author.rb:9:in `each'
+app/models/author.rb:9:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:34:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>3, "names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>3}}
+Completed 500 Internal Server Error in 31450ms (ActiveRecord: 0.6ms | Allocations: 23871)
+
+
+  
+SystemExit (exit):
+  
+(pry):21:in `abort'
+(pry):21:in `block (2 levels) in format_names'
+app/models/author.rb:26:in `block (2 levels) in format_names'
+app/models/author.rb:25:in `block in format_names'
+app/models/author.rb:9:in `each'
+app/models/author.rb:9:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:35:13 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>3, "names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["CAssiano Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>3}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"COSTA, Cassiano Mangini da\", \"SOUZA, Wilson\", \"ALMEIDA FILHO, Roberto\"]"], ["created_at", "2019-10-21 15:35:13.286285"], ["updated_at", "2019-10-21 15:35:13.286285"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (185.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 197ms (Views: 0.2ms | ActiveRecord: 186.5ms | Allocations: 6313)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:35:28 -0300
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>3, "names"=>["Danilo Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["Danilo Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>3}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.2ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"COSTA, Danilo Mangini da\", \"SOUZA, Wilson\", \"ALMEIDA FILHO, Roberto\"]"], ["created_at", "2019-10-21 15:35:28.081812"], ["updated_at", "2019-10-21 15:35:28.081812"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (196.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 202ms (Views: 0.3ms | ActiveRecord: 197.2ms | Allocations: 3335)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:38:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>4, "names"=>["Danilo Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["Danilo Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>4}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.9ms | Allocations: 3063)
+
+
+  
+RuntimeError (The number of names must be equal):
+  
+app/models/author.rb:38:in `format_names'
+app/controllers/api/v1/authors_controller.rb:19:in `create'
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:39:41 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>3, "names"=>["Danilo Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["Danilo Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>3}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.2ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"COSTA, Danilo Mangini da\", \"SOUZA, Wilson\", \"ALMEIDA FILHO, Roberto\"]"], ["created_at", "2019-10-21 15:39:41.388463"], ["updated_at", "2019-10-21 15:39:41.388463"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (176.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 200ms (Views: 0.2ms | ActiveRecord: 177.1ms | Allocations: 6284)
+
+
+Started POST "/api/v1/authors" for ::1 at 2019-10-21 12:42:13 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthorsController#create as */*
+  Parameters: {"names_total"=>3, "names"=>["Danilo Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "author"=>{"names"=>["Danilo Mangini da Costa", "Wilson SOuza", "RobERto AlmeIda FilHo"], "names_total"=>3}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("names", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["names", "[\"COSTA, Danilo Mangini da\", \"SOUZA, Wilson\", \"ALMEIDA FILHO, Roberto\"]"], ["created_at", "2019-10-21 15:42:13.920272"], ["updated_at", "2019-10-21 15:42:13.920272"]]
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+  [1m[35m (103.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/authors_controller.rb:21:in `create'
+Completed 201 Created in 127ms (Views: 0.4ms | ActiveRecord: 104.5ms | Allocations: 6646)
+
+
